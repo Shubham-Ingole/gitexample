@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	</head>
+	<body>
+	
+	  <h1>Hello I am calculator </h1>
+	   <label>1st number</label>
+	   <input type="text" id="lname" name="lname"><br><br>
+	   <label>2nd number</label>
+	   <input type="text" id="2name" name="2name">
+	   
+	  <p id="demo"></p>
+	  <button type="button" onclick="fun1()">Click</button>
+	  <div class="thisis"style="width:100px;height:50px;background-color:blue"><p>Hello I am blue</p></div>
+	  <button class="btn1" type="button" onClick="change()">change color</button>
+	  
+	  
+	
+<script>
+$(document).ready(function(){
+	$(".btn1").mouseenter(function(){
+	$(".thisis").css("width", "200px");
+	});
+});
+$(document).ready(function(){
+	$(".btn1").mouseleave(function(){
+	$(".thisis").css("width", "100px");
+	});
+});
+
+function fun1(){
+	  document.getElementById("demo").innerHTML = funcal();
+
+}
+
+function funcal()
+{
+	var x = document.getElementById("lname").value;
+	var y = document.getElementById("2name").value;
+	var c = parseInt(x)+parseInt(y);
+	return c;
+}
+  
+</script>
+ 
+	</body>
+ </html>
